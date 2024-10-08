@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JavaScript</title>
+</head>
+
+<body>
+    <h1> JavaScript Functions</h1>
+    <script> 
+        function doStuff(){
+            var myString = "Here is a string with lowercase letters";
+            var upperString= myString.toUpperCase();
+            console.log(myString); 
+            console.log(upperString); 
+        }
+
+        //doStuff(); 
+
+        function checkNum() {
+            var userNum = prompt("Enter a whole number", "");
+
+            if(userNum < 10) {
+                console.log("you entered a number less than 10");
+                for(var i=0; i<10; i++){
+                    console.log('Here is a ${i}');
+                    }
+                
+                } else if (userNum > 9) {
+                    console.log("you entered a big number"); 
+                } else {
+                    console.log("ERROR: you didn't enter a number!")
+                }
+            }
+
+        //checkNum(); 
+        
+        function upperMessage() {
+            var upper = message.toUpperCase();
+            console.log(upper);
+        }
+
+        //upperMessage("an important message!"); 
+
+        function addNums (nums1, nums2) {
+            var sum = nums1 +nums2; 
+            console.log(sum); 
+        }
+
+        addNums(4, 3);
+
+        function returnSum (nums1, nums2) {
+            var sum = nums1 + nums2; 
+            return sum; 
+        }
+
+        console.log(returnSum (5,3)); 
+
+        
+        
+
+    </script>
+    
+</body>
+</html>
