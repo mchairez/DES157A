@@ -48,18 +48,65 @@
             console.log(sum); 
         }
 
-        addNums(4, 3);
+       // addNums(4, 3);
 
         function returnSum (nums1, nums2) {
             var sum = nums1 + nums2; 
             return sum; 
         }
 
-        console.log(returnSum (5,3)); 
+        //console.log(returnSum (5,3)); 
 
-        
-        
+        var food= ["cheese", "fruit","chicken", "pie" ]; 
 
+        function randomInt(min, max) {
+
+            var numOfValues = max - min +1; 
+            var randomNum = Math.random(); 
+            var randomVal = randomNum * numOfValues; 
+            var roundedRandomVal = Math.floor(randomVal); 
+            var finalNum = min + roundedRandomVal; 
+            
+             return finalNum; 
+        }
+
+        //console.log (food[randomInt(0,3)]);
+        //randomInt(5,10); 
+        
+        var food= ["cheese", "fruit","chicken", "pie" ]; 
+
+        function randomInt(min, max) {
+            return Math.floor ( ( max- min +1) * Math.random () ) + min; 
+        }
+
+        //console.log(food[randomInt(0,3)])
+
+        var greeting = function() {
+            var name = prompt("Please tell me your name", ""); 
+
+            console.log('Hello ${name}, how are you today?');
+        }
+
+        //greeting(); 
+
+        var greeting= "Hello, and good morning!"; 
+
+        function capitalizeFunction(anyString) {
+            anyString = anyString.toUpperCase(); 
+            return anyString; 
+        }
+
+        var capitalizeExpression = function(anyString) {
+            anyString = anyString.toUpperCase(); 
+            return anyString; 
+        }
+
+        var capitalizeArrow = anyString => anyString.toUpperCase(); 
+
+        //console.log(capitalizeExpression(greeting));
+        //console.log(capitalizeFunction(greeting)); 
+        //console.log(capitazlieArrow(greeting))
+    
     </script>
     
 </body>
