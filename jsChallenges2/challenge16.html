@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Function Challenges: Challenge 16</title>
+</head>
+<body>
+    <h1>JavaScript Function Challenges</h1>
+
+    <h2>Challenge 16</h2>
+
+        <script> 
+            var yourName= prompt(`state your name`, ``); 
+            var food= [`pizza`, `burgers`, `fries`, `tacos`]
+            
+            function hello(name) {
+
+                var greeting; 
+
+                if(name == null || name == '') {
+                    console.log("You didn't give me a name"); 
+                }
+                else {
+                    greeting = `Hello ${name}, and welcome!`;
+                }
+                return greeting; 
+            }
+
+            function randomInt(min, max) {
+                return Math.floor( (max - min + 1) * Math.random() ) + min;
+            }
+
+            function hospitality (name, gift){
+
+                console.log(hello(name)); 
+                var randomGift = gift[randomInt(0, gift.length-1)];
+                console.log(`${name}, would you like some ${randomGift}?`);
+            }
+            
+            hospitality(yourName, food);
+
+            
+        </script>
+    
+</body>
+</html>

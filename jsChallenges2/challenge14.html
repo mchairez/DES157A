@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Function Challenges: Challenge 14</title>
+</head>
+<body>
+    <h1>JavaScript Function Challenges</h1>
+
+    <h2>Challenge 14</h2>
+
+        <script> 
+            var yourName= prompt(`state your name`, ``); 
+            
+            function hello(name) {
+
+                var greeting; 
+
+                if(name == null || name == '') {
+                    console.log("You didn't give me a name"); 
+                }
+                else {
+                    greeting = `Hello ${name}, and welcome!`;
+                }
+                return greeting; 
+            }
+
+            console.log(hello(yourName));
+
+            
+        </script>
+    
+</body>
+</html>
