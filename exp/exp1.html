@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Experimentation- Selections & Loops</title>
+</head>
+<body>
+    <h1> Experiment 1</h1>
+    <h2> Right click on your mouse or touchpad and then select "Inspect" from the dropdown menu. Then click on "console" displayed as the second option on the tab bar up top to see the message displayed. </h2>
+
+    <script> 
+    //Insert your full name into the prompt bar to generate a special greeting in the console.//
+
+        var name1 = prompt("Enter your first name", "");
+        var name2 = prompt("Enter your last name", "");
+
+        function addNames (name1, name2) {
+            var sum = name1+ "" +name2; 
+            console.log(`Hello ${name1} ${name2}. We have been expecting you.`); 
+        }
+
+        addNames(name1, name2);
+    </script>
+    
+</body>
+</html>
