@@ -7,20 +7,49 @@
 </head>
 <body>
     <h1> Experiment 1</h1>
-    <h2> Right click on your mouse or touchpad and then select "Inspect" from the dropdown menu. Then click on "console" displayed as the second option on the tab bar up top to see the message displayed. </h2>
+    <h2> Right click on your mouse or touchpad and then select "Inspect" from the dropdown menu. Then click on "console" displayed as the second option on the tab bar up top to see if you guessed correctly. </h2>
 
+    
     <script> 
-    //Insert your full name into the prompt bar to generate a special greeting in the console.//
+        //tbh this code feels a bit incomplete and i definitely think its missing some things but the goal is that it conveys as a number guessing machine and the for loops is used to tell you how many attempts you've used while guessing//
 
-        var name1 = prompt("Enter your first name", "");
-        var name2 = prompt("Enter your last name", "");
+        var myNum= 7; 
+        var attemptsPossible = 5;
+        var gain= 0; 
+        var guessAmount = 1; 
+        var text= ""; 
 
-        function addNames (name1, name2) {
-            var sum = name1+ "" +name2; 
-            console.log(`Hello ${name1} ${name2}. We have been expecting you.`); 
+        for (var numGuess = 1; numGuess < attemptsPossible; numGuess++) {
+            var guess = parseInt(prompt("Pick a number between 1-10. Prompt bar will display until you get the answer correct."));
+        
+
+        if (guess < 1 || guess > 10){
+            text = "The answer you chose is out of bounds. The answer can only be between 1-10";
+            console.log(text);
+            gain++; 
+            numGuess++; 
+            continue; 
         }
 
-        addNames(name1, name2);
+        if(guess === myNum) {
+            text = ("correct; this line will repeat for every guess you took: here is " + guessAmount + " attempt(s)");
+            console.log(text);
+            break;
+        } else {
+            text=("guess again");
+            console.log(text);
+        }
+
+    
+        if(numGuess === attemptsPossible) {
+            text = "Sorry, you've ran out of guesses";
+
+            }
+        }
+
+
+    console.log(text);
+
     </script>
     
 </body>

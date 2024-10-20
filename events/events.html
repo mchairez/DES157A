@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in javaScript</title>
+</head>
+<body>
+    <h1> Events in javaScript</h1>
+    <a href="http:google.com">Go to Google</a>
+    <button>Don't Press Me</button>
+
+    <script> 
+        var bttn = document.querySelector('button');
+
+        //number 1//
+
+        /*function ouch(){
+            alert("oh no you didn't!");
+        }
+        bttn.onclick = ouch; */
+        
+        //number 2//
+
+       /*bttn.onclick = function(){
+            alert("Oh no you didn't");
+        } */
+
+        //number 3//
+
+        /*function ouch(){
+            alert("Oh no you didn't!");
+        } 
+
+        bttn.oddEventListener('click', ouch); */
+
+        //this one we need//
+
+        bttn.addEventListener('click',function(event){
+            event.target.style.backgroundColor = "red"; 
+            //console.log(llamas);
+            alert("Oh no you didn't"); 
+        })
+
+        //number 5- Preventing Default Behavior// 
+        var myLink = document.querySelector('a');
+
+        myLink.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            alert("Dont go to Google!");
+        } );
+
+    </script>
+    
+</body>
+</html>
