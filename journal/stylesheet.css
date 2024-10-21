@@ -52,6 +52,8 @@ p{
         font-weight: 400;
         font-style: normal;
         font-size: 23px;
+        text-align: left;
+        padding: 20px; 
       
 }
 
@@ -63,8 +65,8 @@ main{
     gap: 25px; 
     max-width: 90%; 
     margin: auto;
-    padding: 30px; 
-    padding-bottom: 60px; 
+    padding: 20px; 
+    padding-bottom: 30px; 
 }
 
 .orion{
@@ -88,7 +90,7 @@ main{
     border-radius: 5px;
     color: rgb(75, 44, 33);
     background-color: rgb(242, 233, 218);
-    padding-bottom: 3em;
+    padding-bottom: 2em;
     
 }
 
