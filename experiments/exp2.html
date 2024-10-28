@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Js Experiments; Functions & DOM </title>
+    <style>
+        .green{
+            color: green;
+        }
+        .red{
+            color: red; 
+        }
+    </style>
 </head>
+
 <body>
-    <script> 
+    <h1 id="titleCard">This title turns green or red depending on if you input your name into the prompt bar. If you check the console, it will also respond according to your choice of action. </h1>
+    
+    <script>
+    
+        var titleCard= document.querySelector('#titleCard');
+
+        var firstName = prompt("Enter your first name", "");
+        var lastName = prompt("Enter your first name", "");
         
+        function addNames (firstName, lastName) {
+            if (firstName && lastName) {
+            titleCard.className= "green";
+            console.log(`Welecome ${firstName } ${lastName}; it's nice to see you here :)`); 
+
+            } if (firstName === null && lastName === null){
+            titleCard.className = "red";
+            console.log("You didn't enter your name :( ");
+            }
+        }
+
+        addNames(firstName, lastName);
     </script>
     
 </body>
