@@ -2,7 +2,7 @@
     'use strict';
     console.log('running js');
 
-    document.addEventListener('DOMContentLoaded', function(){
+    document.addEventListener('DOMContentLoaded', function (){
         const divTag = document.querySelector('div');
         const btn = document.querySelector('button');
 
