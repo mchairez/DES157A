@@ -4,25 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Event Challenges: Challenge 23</title>
+    <script src="script23.js"defer></script>
 </head>
+
 <body>
-    
-    <h1> JavaScript Event Challenges: Challenge 23</h1>
-    <p> Here is a paragraph of text</p>
-    <p> Here is another paragraph of text</p>
-    <p> Here is a third paragraph of text</p>
-    <button> Turn them all green dammit </button>
-
-    <script> 
-        var pTags = document.querySelectorAll('p');
-        var btn = document.querySelector('button');
-
-        btn.addEventListener('click', function() {
-            for (var i=0; i<pTags.length; i++) {
-                pTags[i].style.color = "green";
-            }
-        }); 
-
-    </script>
+    <main>
+        <h1> JavaScript Event Challenges: Challenge 23</h1>
+        <p> Here is a paragraph of text</p>
+        <p> Here is another paragraph of text</p>
+        <p> Here is a third paragraph of text</p>
+        <button> Turn them all green dammit </button>
+    </main>
 </body>
 </html>

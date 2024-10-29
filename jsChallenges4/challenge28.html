@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Event Challenges: Challenge 28</title>
+    <script src="script28.js"defer></script>
     <style>
         div {
             width: 50px; 
@@ -21,22 +22,11 @@
         }
     </style>
 </head>
+
 <body>
     <h1> JavaScript Event Challenges: Challenge 28</h1>
 
     <div> </div>
     
-    <script> 
-        var divTag = document.querySelector('div');
-
-        divTag.addEventListener('mouseover', function(){
-            divTag.className="big";
-        });
-
-        divTag.addEventListener('mouseout', function(){
-            divTag.removeAttribute('class');
-        });
-
-    </script>
 </body>
 </html>

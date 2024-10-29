@@ -4,39 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Event Challenges: Challenges 26</title>
+    <script src="script26.js"defer></script>
 </head>
+
 <body>
-    <h1> JavaScript Event Challenges: Challenges 26 </h1>
-    <div>
-        <p> Here is the first paragraph of text </p>
-    </div>
-    <button>Add a paragraph</button>
-    <button> Remove paragraph</button>
+    <main>
+        <h1> JavaScript Event Challenges: Challenges 26 </h1>
+        <div>
+            <p> Here is the first paragraph of text </p>
+        </div>
+        <button>Add a paragraph</button>
+        <button> Remove paragraph</button>
+    </main>
 
-    <script> 
-        var divTag = document.querySelector('div');
-        var btnAdd = document.querySelectorAll('button')[0];
-        var btnDelete = document.querySelectorAll('button')[1];
-        var numOfPs = 1; 
-
-        btnAdd.addEventListener('click', function(){
-            numOfPs++;
-            var newP = document.createElement('p');
-            var pText = document.createTextNode(
-                `This is paragraph number ${numOfPs}`);
-            newP.appendChild(pText);
-            divTag.appendChild(newP);
-        });
-
-        btnDelete.addEventListener('click',function(){
-            if(numOfPs > 1) {
-                divTag.removeChild(divTag.children[numOfPs-1]);
-                numOfPs--;
-            } else {
-                alert("don't delete the last paragraph")
-            }
-
-        });        
-    </script>
 </body>
 </html>
