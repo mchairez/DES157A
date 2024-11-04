@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Challenge 04</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Mini Challenge 04</h1>
+
+    <p>For this challenge add script tags at the bottom of this page, just before the closing body tag. In the script tags add a script that replaces the content of the div element below with a paragraph that says "Life is 2x as good with a kitten!", and an image tag that has the source set to the picture of Una in the images folder (don't forget an alt attribute!).</p>
+    <p>Then set the class on the div to "changed". When you're done, it should look like the image below. <em>Hint: use the className and innnerHTML properties to do this.</em></p>
+    
+    <div id="changeme">I'm so sad, I wish I had a kitten.</div>
+
+    <img src="images/screenshot.png" alt="finished image">
+
+    <script> 
+
+        var changedDiv = document.querySelector('#changeme');
+        chanagedDiv.innerHTML = '<p>Life is 2x as good with a kitten!</p> <img src="images/una.jpg" alt="kitten">';
+        changedDiv.className = "changed";
+    </script>
+    
+</body>
+</html>

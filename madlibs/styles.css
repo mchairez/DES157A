@@ -1,0 +1,60 @@
+/* note its a little rough right now but will be cleaned up later*/
+
+h1 {
+    font-size: 60px;
+}
+
+img {
+    position: relative;
+    top: 90px;
+}
+
+body {
+    background-color: #82ad65; 
+    background-size: cover; 
+    background-position: center; 
+    height: 100%; 
+    width: 100%; 
+    border-style: none;
+}
+
+.hold {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 1px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    border: 2px solid rgb(60, 6, 6);
+}
+
+.libs {
+    border-radius: 5px;
+    color: rgb(75, 44, 33);
+    background-color: rgb(244, 232, 210);
+    padding: 4em;
+    
+}
+
+#myform {
+    line-height: 2.5em;
+    text-align: center;
+}
+
+/* .trapezoid {
+	border-bottom: 50px solid #591a1a;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 425px;
+    z-index:1; 
+    position: sticky;
+}
+
+look into how to make the trapazoid stick to the top of the box */
+
+
+footer {
+    padding: 40px; 
+    color: white;
+    text-align: center;
+    }

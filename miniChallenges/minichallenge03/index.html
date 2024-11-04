@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Challenge 03</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Mini Challenge 03</h1>
+
+    <p>For this challenge add script tags at the bottom of this page, just before the closing body tag, and add a script that defines a function called greeting, which takes one parameter. The parameter will contain the name of a person. Then in the script create a variable that creates a custom welcome greeting for that person and <em>returns the value of that variable</em>.</p>
+    <p>Then add a call to the console.log method that runs that function, passing in a name of a person, so you get the custom greeting displaying in the console, as seen in the screenshot below.</p>
+
+    <img src="images/screenshot.png" alt="screenshot of output">
+    
+    <script> 
+        var yourName= prompt(`state your name`, ``); 
+        
+        function greeting(name) {
+                console.log(`Hello ${name}, how are you today?`); 
+            }
+
+        greeting(yourName); 
+    </script>
+</body>
+</html>

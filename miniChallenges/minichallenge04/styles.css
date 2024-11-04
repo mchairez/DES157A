@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 600px;
+    margin: auto;
+    color: #333;
+    line-height: 1.5em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+div {
+    background-color: #ccc;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.changed {
+    display: flex;
+    gap: 20px;
+    background-color: #ef34a1;
+    align-items: center;
+}
+
+.changed p {
+    font-size: 2em;
+    line-height: 1.5em;
+    flex: 1;
+    text-align: center;
+    color:rgb(27, 74, 162);
+}
+
+.changed img {
+    flex: 1;
+}

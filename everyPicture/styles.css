@@ -1,0 +1,48 @@
+body {
+    font-family: arial;
+    color: #122236;
+    padding-top: 200px;
+    line-height: 1.4em;
+}
+
+main {
+    max-width: 600px;
+    padding: 20px;
+    margin: auto;
+    background-color: rgb(214, 231, 245);
+}
+
+.hidden {
+    visibility: hidden;
+    opacity:0; 
+}
+
+.showing {
+    visibility: visible; 
+    opacity: 1; 
+}
+
+#overlay {
+    position: absolute;
+    background-color: #2d4e6e80;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height:100vh;
+    transition-property: opacity, visibility; 
+    transition-duration: 1s; 
+    transition-timing-function: ease;
+}
+
+#overlay article {
+    box-sizing: border-box;
+    background-color:#de5752;
+    padding: 20px;
+    width: 50vw;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+}
