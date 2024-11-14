@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Example</title>
+</head>
+
+<body>
+    <h1>Object Example</h1>
+    <script>
+        const person = {
+            firstname: 'Mariko',
+            lastname: 'Masaoka',
+            pets: ['dog', 'cat', 'chicken', 'llama'],
+            phonenumber: {
+                home: '916-123-4567',
+                work: '916-432-8765',
+                cell: '916-456-7890'
+            }
+        }
+
+        console.log(person.pets[2]);
+        console.log(person.phonenumber.home);
+    
+    /*const person = {
+			firstname: "Mariko",
+			lastname: "Masaoka",
+			age:25
+		};
+
+		/* or..
+		const person = new Object();
+
+		person.firstname = "Mariko";
+		person.lastname = "Masaoka";
+		person.age = 25; 
+		
+
+		console.log(person.lastname);*/
+
+		/*const person = {
+			firstname: "Mariko",
+			lastname: "Masaoka", 
+			pets: ["dog", "cat", "chicken", "llama"],
+			phonenumber: {
+				home: "916-123-4567",
+				work: "916-432-8765",
+				cell: "916-456-7890",
+			}
+		};
+
+		console.log(person.pets[2]);
+		console.log(person.phonenumber.home); */
+
+		/*const person = {
+			firstname: "Mariko",
+			lastname: "Masaoka", 
+			greeting: function() {console.log("hello!") }
+		};
+
+		person.greeting();*/
+
+		/*const person = {
+			firstname: "Mariko",
+			lastname: "Masaoka", 
+			greeting: function() {
+				console.log(`hello ${this.firstname} ${this.lastname}`) }
+		};
+
+		person.greeting();*/
+
+		/*function printableMessage() {
+			let message = 'hello';
+
+			function printableMessage() {
+				console.log(message); }
+
+			function setMessage(newMessage) {
+				message = newMessage; }
+
+			return {
+				printMessage : printMessage, 
+				setMessage: setMessage
+			};
+		} */
+
+        /*const awesome1 = printableMessage(); 
+        awesome1.printMessage();
+
+        const awesome2 = printableMessage();
+        awesome2.setMessage('h1');
+        awesome2.printMessage(); 
+
+        awesome.printMessage(); */
+
+
+    </script>
+</body>
+
+</html>

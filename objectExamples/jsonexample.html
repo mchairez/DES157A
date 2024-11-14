@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JSON Data</title>
+</head>
+<body>
+	<h1>Working with JSON Data</h1>
+
+	<p>Usually JSON data will come from an external source, such as a database, or an API (Application Programming Interface), such as Google Maps or from Twitter. In this file, we are simply including the JSON directly.</p>
+
+	<script>
+
+		const json = '{ "first_name": "Joe", "last_name": "Jones", "age": 25, "social_media": [ "facebook", "Twitter", "Instagram" ], "online": true, "phone_numbers": { "home": "916-123-4567", "work": "916-321-9876", "mobile": "530-212-1111" }, "status": "active" }';
+
+		const user = JSON.parse(json); 
+
+		console.log(json); 
+		console.log(user); 
+
+		console.log(use.first_name); 
+
+		delete user.phone_numbers.work; 
+		console.loge(user);
+
+		//Converting back to JSON
+		//const data = JSON.stringify(user);
+		//console.log(data);
+
+
+
+		//<?xml version="1.0" encoding="UTF-8"?>
+        /*<root>
+            <age>25</age>
+            <first_name>Joseph</first_name>
+            <last_name>O’Malley</last_name>
+            <social_media>
+                <network>facebook</network>
+                <network>Twitter</network>
+                <network>Instagram</network>
+            </social_media>
+            <online>true</online>
+            <phone_numbers>
+                <home>916-123-4567</home>
+                <mobile>530-212-1111</mobile>
+                <work>916-321-9876</work>
+            </phone_numbers>
+            <status>active</status>
+        </root> 
+
+		/*const user = '{
+			"first_name": "Joseph",
+			"last_name": "O’Malley",
+			"age": 25,
+			"social_media": [
+				"facebook",
+				"Twitter",
+				"Instagram"
+			],
+			"online": true,
+			"phone_numbers": {
+				"home": "916-123-4567",
+				"work": "916-321-9876",
+				"mobile": "530-212-1111"
+			},
+			"status": "active"
+		}'; */
+
+
+
+
+		
+	</script>
+
+</body>
+</html>

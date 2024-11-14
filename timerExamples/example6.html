@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>recursion</title>
+
+	<style>
+		body {
+			display: grid;
+			height: 100vh;
+			place-content: center;
+		}
+
+		.one {
+			width: 10vh;
+			height: 10vh;
+			background: #d64507;
+			border-radius: 50%;
+			margin: auto;
+			transition: all 2s ease-in-out;
+		}
+
+		.two {
+			width: 90vh;
+			height: 90vh;
+			background: #1B2F6B;
+			border-radius: 50%;
+			margin: auto;
+			transition: all 2s ease-in-out;
+		}
+
+		button {
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="thediv" class="one"></div>
+	<button id="stop">Stop!</button>
+
+	<script>
+		(function () {
+			'use strict';
+
+			const theDiv = document.getElementById('thediv');
+			const stopBtn = document.querySelector('#stop');
+			let currentClass = 'one';
+			// Create two variables, inhale and exhale
+			let inhale, exhale; 
+			
+			
+
+			function classRotator() {
+				if (currentClass == 'one') {
+					// assign this setTimeout to the inhale variable
+					inhale = setTimeout(function () {
+						theDiv.className = 'two';
+						currentClass = 'two';
+						classRotator();
+					}, 2000);
+				}
+				else {
+					// assign this setTimeout to the exhale variable
+					exhale = setTimeout(function () {
+						theDiv.className = 'one';
+						currentClass = 'one';
+						classRotator();
+					}, 2000);
+				}
+			}
+			classRotator();
+
+			// add the event handler to the button to stop the script
+
+			stopBtn.addEventListener('click', function(){
+				clearTimeout(inhale);
+				clearTimeout(exhale); 
+			}); 
+
+			startBtn.addEvmentListener('click', function (){
+				classRotator();
+			});
+
+		})();
+
+	</script>
+
+</body>
+
+</html>

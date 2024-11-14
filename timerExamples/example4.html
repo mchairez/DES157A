@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Timers Example 4</title>
+
+    <style>
+        body {
+            font-size: 6em;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            display: grid;
+            height: 100vh;
+            place-content: center;
+        }
+        p { text-align: center; }
+        .orange { background-color: orange; }
+    </style>
+
+</head>
+
+<body>
+    <p id="countdown">10</p>
+
+    <script>
+        (function() {
+            'use strict';
+            const body = document.querySelector('body');
+            const p = document.querySelector('p');
+            let counter = 10;
+
+            function countTimeDown() {
+                console.log(`running countTimeDown ${11 - counter} time(s)`);
+                // Add recursive setTimeout function here...
+                setTimeout(function(){
+                    if (counter > 0) {
+                        counter --; 
+                        p.textContent = counter; 
+                        countTimeDown();
+                    }
+                    else  {
+                        body.className = "orange";
+                        p.textContent = "game over!";
+                    }
+                }, 1000);
+            }
+            countTimeDown();
+
+        })();
+    </script>
+
+</body>
+
+</html>
