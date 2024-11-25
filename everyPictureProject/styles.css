@@ -1,3 +1,80 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background: rgb(247,196,217);
+    background: linear-gradient(0deg, rgba(247,196,217,1) 0%, rgba(255,249,238,1) 46%);
+    width: 100vw;
+    height:100vh;
+
+}
+
+p{
+    font-size: 18px; 
+    font-family: "Forum", system-ui; 
+    font-weight: 400; 
+    color: rgb(105, 33, 75); 
+    
+}
+
+article p{
+    font-size: 18px; 
+    font-family: "Lacquer", system-ui; 
+    font-weight: 400; 
+    color: rgb(32, 56, 94); 
+    padding-left: 15px;
+    padding-right: 15px; 
+    padding-top: 15px; 
+    
+}
+
+article h2{
+    font-size: 40px; 
+    font-family: "Rubik Vinyl", system-ui; 
+    font-weight: 400; 
+    color: rgb(27, 48, 43); 
+}
+
+.hidden {
+    visibility: hidden;
+    opacity:0; 
+}
+
+.showing {
+    visibility: visible; 
+    opacity: 1; 
+}
+
+#overlay {
+    position: absolute;
+    z-index: 10;
+    background-color: #2d4e6e80;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height:100vh;
+}
+
+#overlay.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease, visibility 0s 1s;
+}
+
+#overlay.showing {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+
+h1{
+    padding-top: 30px;
+    font-size: 60px; 
+    font-family: "Rubik Vinyl", system-ui; 
+    font-weight: 400; 
+    color: rgb(123, 12, 77); 
+}
+
 nav {
     display: block; 
 }
@@ -19,15 +96,13 @@ ul {
     padding-inline-start: 40px;
 }
 
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
-}
-
 
 nav ul li a {
+    font-size: 23px; 
+    font-family: "Gaegu", system-ui; 
+    font-weight: 400; 
+    color: rgb(16, 55, 128); 
     display: block;
-    color: #2a1b08;
     font-weight: bold;
     text-decoration: none;
     padding: 20px;
@@ -54,6 +129,7 @@ body {
 }
 
 #container img {
+    z-index: 1;
     display: block;
     position: absolute;
     transition: all 3s ease;
@@ -124,3 +200,24 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.overlay {
+    z-index: 10; 
+    box-sizing: border-box;
+    background-color:#e6eef4;
+    padding: 20px;
+    width: 50vw;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+}
+
+.overlay.showing {
+    visibility: visible;
+    opacity: 1; 
+    transition: opacity 1s ease; 
+}
+

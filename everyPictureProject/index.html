@@ -4,23 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Every Picture Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Gaegu&family=Lacquer&family=Rubik+Vinyl&family=Special+Elite&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
     <header> 
-        <h1>Move the Mouse to the Hotspots To Zoom</h1>
+        <h1>Mari's Room Tour</h1>
         <nav> 
             <ul> 
-                <li><a href= "images/gallery.jpeg">Gallery</a></li>
-                <li><a href= "images/plushies.jpeg">Plushies</a></li>
-                <li><a href= "images/vinyls.jpeg">Vinyls</a></li>
-                <li><a href= "images/laptop.jpeg">Laptop</a></li>
-                <li><a href= "images/cassettes.jpeg">Cassettes</a></li>
-                <li><a href= "images/seashells.jpeg">Seashells</a></li>
+                <li><a href="#" class="open" data-overlay="gallery-overlay">GALLERY</a></li>
+                <li><a href="#" class="open" data-overlay="plushies-overlay">PLUSHIES</a></li>
+                <li><a href="#" class="open" data-overlay="vinyls-overlay">VINYLS</a></li>
+                <li><a href="#" class="open" data-overlay="laptop-overlay">LAPTOP</a></li>
+                <li><a href="#" class="open" data-overlay="cassettes-overlay">CASSETTES</a></li>
+                <li><a href="#" class="open" data-overlay="seashells-overlay">SEASHELLS</a></li>
             </ul>
         </nav>
     </header>
+
+    <section id="gallery-overlay" class="hidden overlay">
+        <article>
+            <h2>Gallery</h2>
+            <img src="images/gallery.jpeg" height="300" width="400" alt="gallery">
+            
+
+            <p>This assortment of posters was one of my first ever projects for this room. I purposely curated the color scheme to match both my roommate and I's duvet colors and the aquatic theme our room has slowly began incorporating. The wall includes a lot of graphic design elements/posters that I really enjoy as well as editorial-esque photoshoots that I really enjoy since I have a soft spot for fashion. I try to make sure that no two posters look the same but that it maintains the sentiment of being cohesive.</p>
+            <button class="close">close</button>
+        </article>
+    </section>
+
+    <section id="plushies-overlay" class="hidden overlay">
+        <article>
+            <h2>Plushies</h2>
+            <img src="images/plushies.jpeg" height="300" width="400" alt="plushies">
+            
+
+            <p>From left to right, the plushies names are: Cheese, Heyhey, Monke, Carmy, Kitty, and Squishy. Funnily enough, I can't say I bought a single one myself as they were all gifts. The squishmello on the right was a parting gift from my first year roommate to me that I didn't know she had left me until it was my turn to pack up my side of the room and I saw it in the corner of my bed. The little yellow bear on the left most side which is Cheese (full name: Quarter Pounder with Cheese) was a random stuffed animal that my friend had bought at the thrift store because he found him too cute not to leave behind. And despite my concerns about him possibly being haunted, I ended up fostering and basically fully adopting him (I forgot to give him back). </p>
+            <button class="close">close</button>
+        </article>
+    </section>
+
+    <section id="vinyls-overlay" class="hidden overlay">
+        <article>
+            <h2>Vinyls</h2>
+            <img src="images/vinyls.jpeg" height="300" width="400" alt="vinyls">
+            
+
+            <p>I am an absolute music LOVER; I collect just about every physical form of music that there is. Despite it being the trend of my generation, though, I have to say that vinyls was the media I got into collecting last. I started collecting cassettes my freshman year of college and cds my sophomore year. Despite both already being very expensive investments, I decided to bite the bullet and invest in vinyl collecting my junior year. The two shown above are some of my current favorite records on rotation: "Cinema" by the Marias and "Melodrama" by Lorde. </p>
+            <button class="close">close</button>
+        </article>
+    </section>
+
+    <section id="laptop-overlay" class="hidden overlay">
+        <article>
+            <h2>Laptop</h2>
+            <img src="images/laptop.jpeg" height="440" width="350" alt="laptop">
+            
+
+            <p>My prized posession; my 16 inch macbook which cost 2x - 3x my rent and burnt absolute holes in my pockets but I love it to death. When I'm not using VS Code or Adobe Suite, my most used application would probably be Spotify and the odds are you might catch me scrolling through Pinterest as well. And while I have to admit, I did originally have VS Code open when I went to take this picture.. this one looks a bit more aesthetic doesn't it? </p>
+            <button class="close">close</button>
+        </article>
+    </section>
+
+    <section id="cassettes-overlay" class="hidden overlay">
+        <article>
+            <h2>Cassettes</h2>
+            <img src="images/cassettes.jpeg" height="440" width="330" alt="cassettes">
+            
+
+            <p>Cassettes will always be my favorite form of music collection. I actually can not count how many I have but I love them all to peaces. My main gripe with cassette collecting is that many modern artists don't release their albums on this form of media and I have to live with never getting the joy of listening to some of my favorite, contemporary artists on cassette. </p>
+            <button class="close">close</button>
+        </article>
+    </section>
+
+    <section id="seashells-overlay" class="hidden overlay">
+        <article>
+            <h2>Seashells</h2>
+            <img src="images/seashells.jpeg" height="440" width="330" alt="seashells">
+            
+
+            <p>I bought this seashell chandelier at a shop on Pier 39 in SF for 20 dollars. Maybe I sound a little crazy but, I actually have to think it might be one of my favorite purchases I have ever made. The colors are beautiful and match theme of my room beautifully and when its summer, they rustle with the motion of the wind spilling in through our window. </p>
+            <button class="close">close</button>
+        </article>
+    </section>
 
     <div id="container">
         <img src="images/room.jpeg" alt="room" class="start">
@@ -30,7 +99,8 @@
         <div id="bottomright"></div>
         <div id="center"></div>
     </div>
-    <p>Mari's room core </p>
+
+    <p>The incredibly real, totally not staged, super cool room of a 21 year old college girl </p>
            
     <script src="script.js"></script>
     
