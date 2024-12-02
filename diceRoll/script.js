@@ -65,7 +65,7 @@
 
         const buttonClickSound = new Audio('audio/click.mp3');
         game.innerHTML = `<p>Roll the dice for ${gameData.players[gameData.index]} </p>`; 
-        actionArea.innerHTML = '<button id= "roll">Roll the Dice</button>'; 
+        actionArea.innerHTML = '<div class= "flex-buttons"> <button id= "roll">Roll the Dice</button> <button id="pass">Pass</button> </div>'; 
     
         document.getElementById('roll').addEventListener('click', function(){
             buttonClickSound.play();
