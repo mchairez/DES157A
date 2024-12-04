@@ -154,10 +154,11 @@ footer {
    color: white;
    padding:40px; 
    a {
-      color: white;
-    }
+    color: white;
+  }
 }
 
 a {
-   color: rgba(86, 118, 198, 0.653);
- }
+    color: rgba(86, 118, 198, 0.653);
+  }
+ 
