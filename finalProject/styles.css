@@ -118,7 +118,6 @@ article img {
 }
 
 .showing {
-    visibility: showing;
     opacity: 1;
 }
 
@@ -138,7 +137,7 @@ article img {
 
 .overlay article {
     box-sizing: border-box;
-    background: rgb(255,255,255) height="100vh" width="100vh";
+    background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(248,250,255,1) 46%, rgba(241,246,255,1) 62%, rgba(200,227,251,1) 80%);
     padding: 20px;
     width: 60vw;
