@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {
     'use strict';
-    const sliderContent = document.querySelector('.a');
+    const sliderContent = document.querySelector('.a, .b');
     const sliderWidth = sliderContent.offsetWidth;
     const cloned = sliderContent.cloneNode(true);
     cloned.className = "b";
@@ -28,7 +28,7 @@ window.addEventListener('load', function () {
 
     
     document.addEventListener('click', function(event){
-        if(event.target.className == 'coverA'){
+        if(event.target.className == 'coverA, coverB'){
             console.log(event.target.src);
             const imgSrc = event.target.src;
             const lastSlash = imgSrc.lastIndexOf('/');

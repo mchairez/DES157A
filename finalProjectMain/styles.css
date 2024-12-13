@@ -1,0 +1,266 @@
+:root {
+    --sliderwidth: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: rgb(214,67,105);
+    background: -moz-linear-gradient(0deg, rgba(214,67,105,0.9598433123249299) 0%, rgba(213,130,44,0.8449973739495799) 20%, rgba(224,190,155,1) 39%, rgba(255,252,235,1) 67%);
+    background: -webkit-linear-gradient(0deg, rgba(214,67,105,0.9598433123249299) 0%, rgba(213,130,44,0.8449973739495799) 20%, rgba(224,190,155,1) 39%, rgba(255,252,235,1) 67%);
+    background: linear-gradient(0deg, rgba(214,67,105,0.9598433123249299) 0%, rgba(213,130,44,0.8449973739495799) 20%, rgba(224,190,155,1) 39%, rgba(255,252,235,1) 67%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d64369",endColorstr="#fffceb",GradientType=1);
+    width: 100vw;
+}
+
+.animate {
+    animation-name: moveSlider;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+/*divs and slider stuff*/
+#one {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#two {
+    width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#two img{
+    padding-left: 75px;
+    padding-top: 30px;  
+}
+
+#three{
+    width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#three img{
+    padding-left: 70px; 
+    padding-top: 30px; 
+    padding-bottom: 30px;
+}
+
+.slider {
+    display: flex;
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 360px;
+    transition: all 60s linear; 
+}
+
+.slider div img {
+    height: 100%;
+    display: block;
+    margin-right: 20px;
+}
+
+.sliderpaused {
+    display: flex;
+    position: absolute;
+    top:0;
+}
+
+.a, .b {
+   display: flex;
+   height: 100%;
+}
+/*divs and slider stuff*/
+
+
+
+/*  mini stylings */
+h1{
+    margin-bottom: 60px; 
+    padding-top: 40px;
+    font-size: 110px; 
+    font-family: "Rock 3D", system-ui; 
+    font-weight: 400; 
+    color: rgb(123, 12, 77); 
+    text-align: center;
+}
+
+main h2{
+    font-family: "Lacquer", system-ui;
+    font-weight: 400;
+    font-size: 35px; 
+    letter-spacing: 0.15em;
+    text-align: center; 
+    color: #0d2570;
+}
+
+p{
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+h2, p {
+    margin: 0 0 1em 0;
+}
+
+#text1 h2 {
+    padding-top: 15px; 
+    font-family: "Londrina Shadow", system-ui;
+    font-weight: 400;
+    font-size: 40px;  
+    color: #4d0528;
+}
+
+#text2 h2 {
+    padding-top: 15px; 
+    font-family: "Londrina Shadow", system-ui;
+    font-weight: 400;
+    font-size: 40px;  
+    color: #4d0528;
+}
+
+#text3 h2 {
+    padding-top: 15px; 
+    font-family: "Londrina Shadow", system-ui;
+    font-weight: 400;
+    font-size: 40px;  
+    color: #4d0528;
+}
+
+article img { 
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#one, #two, #three {
+    margin-top: 10%; 
+    width: 100%;
+    overflow-x: hidden;
+    height: 400px;
+    position: relative;
+}
+
+#three:hover .slider{
+    animation-play-state: paused;
+}
+
+/*  mini stylings */
+
+
+
+
+
+.cover:hover{
+    transform: scale(1.15);
+}
+
+.cover{
+    transition: all 500ms; 
+}
+
+
+
+/* key frames-- dont touch */
+@keyframes moveSliderRight {
+    from { left: var(--sliderwidth); }
+    to { left: 0; }
+}
+
+@keyframes moveSliderLeft {
+    from { left: 0; }
+    to { left: var(--sliderwidth); }
+}
+
+/* key frames-- dont touch */
+
+
+
+
+
+/* js classes*/
+.right {
+    animation-name: moveSliderRight;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.left {
+    animation-name: moveSliderLeft;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+/* js classes*/
+
+
+
+/* overlays */
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    opacity: 1;
+}
+
+.overlay {
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition-property: visibility, opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    display: grid;
+    place-content:center;
+}
+
+.overlay article {
+    box-sizing: border-box;
+    background: rgb(255,252,235);
+    background: linear-gradient(0deg, rgba(255,252,235,1) 42%, rgba(244,200,199,1) 85%, rgba(214,67,105,0.9598433123249299) 96%);
+    padding: 20px;
+    width: 60vw;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+    box-shadow: 0px 0px 20px 0px #000000;   
+}
+
+.overlay article img, .overlay article div {
+    width: 50%;
+}
+
+.corner {
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+    border:none;
+    background-color: transparent;
+    color: #f3ebe0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* overlays */
